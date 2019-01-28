@@ -15,7 +15,8 @@ public class TheListedVideos implements Question<Boolean> {
 
     @Override
     public Boolean answeredBy(Actor actor) {
-        return LIST_OF_VIDEOS.resolveAllFor(actor).size()==theNumberOfVideos;
+
+        return LIST_OF_VIDEOS.resolveAllFor(actor).size()>=theNumberOfVideos;
     }
 
     public static Question<Boolean> are(int theNumberOfVideos) {

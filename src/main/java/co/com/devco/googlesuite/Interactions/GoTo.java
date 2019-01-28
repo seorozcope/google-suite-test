@@ -18,8 +18,9 @@ public class GoTo implements Interaction {
     public GoTo (Target theApp){
         this.theApp=theApp;
     }
+
     @Override
-    public <T extends Actor> void performAs(T actor, Target theApp) {
+    public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
                 Open.url("https://www.google.com"),
                 Click.on(GOOGLE_APPS),
@@ -30,4 +31,5 @@ public class GoTo implements Interaction {
     public static Performable theApp (Target theApp){
         return  instrumented(GoTo.class , theApp);
     }
+
 }

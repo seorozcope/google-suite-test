@@ -11,6 +11,7 @@ import cucumber.api.java.en.When;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 
+import static co.com.devco.googlesuite.Exceptions.NumberOfVideosNotExpected.NUMBER_OF_VIDEOS_NOT_EXPECTED;
 import static co.com.devco.googlesuite.userinterfaces.GoogleAppsComponent.YOUTUBE;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
@@ -36,7 +37,7 @@ public class YoutubeStepDefinitions {
     @Then("^he should see at least (\\d+) video listed$")
     public void heShouldSeeAtLeastVideoListed(int theNumberOfVideos) throws Exception {
         theActorInTheSpotlight().should(seeThat(TheListedVideos.are(theNumberOfVideos))
-                .orComplainWith(NumberOfVideosNotExpected.class));
+                .orComplainWith(NumberOfVideosNotExpected.class, NUMBER_OF_VIDEOS_NOT_EXPECTED));
     }
 
 }
