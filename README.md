@@ -46,7 +46,7 @@ Tareas
 Acciones que realiza el actor 
 una tarea puede estar compuesta de tareas y de interacciones
 
-la interacción es una acción de bajo nivel que hace un usuario miesntas que una tarea hace parte del negocio
+la interacción es una acción de bajo nivel que hace un usuario mientras que una tarea hace parte del negocio
 ___________________________
 
 Si queremos identificar en una interacción o tarea si podemos interactuar con algún elemento.
